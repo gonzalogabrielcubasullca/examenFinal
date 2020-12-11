@@ -8,7 +8,6 @@ import org.springframework.data.repository.query.Param;
 
 import com.colegio.entity.Curso;
 
-
 public interface CursoRepository extends JpaRepository<Curso, Integer> {
 
 	@Query("Select c from Curso c where c.nombre like :var_fil")

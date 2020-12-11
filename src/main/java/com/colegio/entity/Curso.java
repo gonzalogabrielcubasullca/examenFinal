@@ -21,7 +21,6 @@ public class Curso {
 	private String codigo;
 	private String nombre;
 	private String estado;
-	private int idSistemaEvaluacion;
 	
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -59,14 +58,6 @@ public class Curso {
 
 	public void setEstado(String estado) {
 		this.estado = estado;
-	}
-
-	public int getIdSistemaEvaluacion() {
-		return idSistemaEvaluacion;
-	}
-
-	public void setIdSistemaEvaluacion(int idSistemaEvaluacion) {
-		this.idSistemaEvaluacion = idSistemaEvaluacion;
 	}
 
 	public SistemaEvaluacion getSistemaEvaluacion() {
