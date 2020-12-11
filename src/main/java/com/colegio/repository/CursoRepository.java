@@ -11,6 +11,6 @@ import com.colegio.entity.Curso;
 
 public interface CursoRepository extends JpaRepository<Curso, Integer> {
 
-	@Query("Select e from Curso c where c.nombre like :var_fil")
+	@Query("Select c from Curso c where c.nombre like :var_fil")
 	public List<Curso> listaPorNombre(@Param("var_fil") String filtro);
 }
